@@ -12,6 +12,7 @@ namespace LinkedListProblem
             linkedList.AddAtBack(56);
             linkedList.AddAtBack(70);
             linkedList.InsertAtParticularPosition(2, 30);
+            linkedList.PopFirst();
             linkedList.Display();
 
         }
