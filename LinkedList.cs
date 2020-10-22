@@ -8,7 +8,7 @@ namespace LinkedListProblem
     {
         internal Node head;
 
-        internal void Add(int data)
+        internal void AddAtBack(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -27,6 +27,20 @@ namespace LinkedListProblem
 
         }
 
+        internal void AddAtFront(int data)
+        {
+            var node = new Node(data);
+            if (this.head == null)
+                this.head = node;
+            else
+            {
+                var temp = head;
+                head = node;
+                node.next = temp;
+            }
+            Console.WriteLine("{0} inserted into the linked list", node.data);
+        }
+
         internal void Display()
         {
             Node temp = this.head;
@@ -36,7 +50,7 @@ namespace LinkedListProblem
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data + " ");
+                Console.Write("->"+temp.data);
                 temp = temp.next;
             }
         }
