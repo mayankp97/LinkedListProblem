@@ -6,7 +6,14 @@ namespace LinkedListProblem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Linked List Problem");
+            //LinkedListDemo();
+            StackDemo();
+
+        }
+
+        public static void LinkedListDemo()
+        {
+            Console.WriteLine("Welcome to Linked List Implementation");
 
             var sortedList = new SortedLinkedList();
             sortedList.Add(56);
@@ -15,8 +22,16 @@ namespace LinkedListProblem
             sortedList.Add(70);
             sortedList.Add(587);
             sortedList.Display();
+        }
+        public static void StackDemo()
+        {
+            Console.WriteLine("Welcome to Stack Implementation!");
 
-
+            var linkedListStack = new LinkedListStack();
+            linkedListStack.Push(70);
+            linkedListStack.Push(30);
+            linkedListStack.Push(56);
+            linkedListStack.Display();
         }
     }
 }
