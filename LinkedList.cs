@@ -4,11 +4,11 @@ using System.Text;
 
 namespace LinkedListProblem
 {
-    class LinkedList
+    public class LinkedList
     {
-        internal Node head;
+        public Node head;
 
-        internal void AddAtBack(int data)
+        public void AddAtBack(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -27,7 +27,7 @@ namespace LinkedListProblem
 
         }
 
-        internal void AddAtFront(int data)
+        public void AddAtFront(int data)
         {
             var node = new Node(data);
             if (this.head == null)
@@ -41,7 +41,7 @@ namespace LinkedListProblem
             Console.WriteLine("{0} inserted into the linked list", node.data);
         }
 
-        internal void InsertAtParticularPosition(int position, int data)
+        public void InsertAtParticularPosition(int position, int data)
         {
             if (position < 1)
             {
@@ -80,7 +80,7 @@ namespace LinkedListProblem
 
         }
 
-        internal Node PopFirst()
+        public Node PopFirst()
         {
             if (this.head == null)
                 return null;
@@ -88,7 +88,7 @@ namespace LinkedListProblem
             return this.head;
         }
 
-        internal Node PopLast()
+        public Node PopLast()
         {
             if (head == null)
                 return null;
@@ -102,7 +102,21 @@ namespace LinkedListProblem
             newNode.next = null;
             return head;
         }
-        internal void Display()
+
+        public Node Search(int value)
+        {
+            var temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    return temp;
+                }
+                temp = temp.next;
+            }
+            return null;
+        }
+        public void Display()
         {
             Node temp = this.head;
             if (temp == null)
