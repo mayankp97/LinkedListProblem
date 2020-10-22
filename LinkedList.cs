@@ -116,6 +116,16 @@ namespace LinkedListProblem
             }
             return null;
         }
+
+        public void InsertAfterElement(int data, int input)
+        {
+            var node = Search(data);
+            if (node == null)
+                return;
+            var newNode = new Node(input);
+            newNode.next = node.next;
+            node.next = newNode;
+        }
         public void Display()
         {
             Node temp = this.head;
