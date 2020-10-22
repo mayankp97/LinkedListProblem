@@ -7,7 +7,8 @@ namespace LinkedListProblem
         static void Main(string[] args)
         {
             //LinkedListDemo();
-            StackDemo();
+            //StackDemo();
+            QueueDemo();
 
         }
 
@@ -36,6 +37,17 @@ namespace LinkedListProblem
             linkedListStack.Pop();
             linkedListStack.PeekAndPopTillEmpty();
             linkedListStack.Display();
+            Console.ReadKey();
+        }
+
+        public static void QueueDemo()
+        {
+            Console.WriteLine("Welcome to Queue Implementation!");
+            LinkedListQueue linkedListQueue = new LinkedListQueue();
+            linkedListQueue.Enqueue(56);
+            linkedListQueue.Enqueue(30);
+            linkedListQueue.Enqueue(70);
+            linkedListQueue.Display();
             Console.ReadKey();
         }
     }
