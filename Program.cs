@@ -32,6 +32,11 @@ namespace LinkedListProblem
             linkedListStack.Push(30);
             linkedListStack.Push(56);
             linkedListStack.Display();
+            linkedListStack.Peek();
+            linkedListStack.Pop();
+            linkedListStack.PeekAndPopTillEmpty();
+            linkedListStack.Display();
+            Console.ReadKey();
         }
     }
 }
