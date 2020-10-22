@@ -25,7 +25,11 @@ namespace LinkedListProblem
             Console.WriteLine("{0} inserted into queue ", node.data);
 
         }
-
+        public void Dequeue()
+        {
+            Console.WriteLine("{0} is dequeued from the queue", head.data);
+            head = head.next;
+        }
         public void Display()
         {
             Node temp = this.head;
@@ -39,6 +43,7 @@ namespace LinkedListProblem
                 Console.Write("->" + temp.data);
                 temp = temp.next;
             }
+            Console.WriteLine();
         }
     }
 }
