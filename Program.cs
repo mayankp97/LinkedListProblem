@@ -9,9 +9,9 @@ namespace LinkedListProblem
             Console.WriteLine("Welcome to Linked List Problem");
             
             var linkedList = new LinkedList();
-            linkedList.AddAtFront(70);
-            linkedList.AddAtFront(30);
-            linkedList.AddAtFront(56);
+            linkedList.AddAtBack(56);
+            linkedList.AddAtBack(30);
+            linkedList.AddAtBack(70);
             linkedList.Display();
 
         }
