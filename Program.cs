@@ -7,15 +7,15 @@ namespace LinkedListProblem
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Linked List Problem");
-            
-            var linkedList = new LinkedList();
-            linkedList.AddAtBack(56);
-            linkedList.AddAtBack(30);
-            linkedList.AddAtBack(40);
-            linkedList.AddAtBack(70);
-            linkedList.Delete(40);
-            linkedList.Display();
-            Console.WriteLine(linkedList.Size());
+
+            var sortedList = new SortedLinkedList();
+            sortedList.Add(56);
+            sortedList.Add(30);
+            sortedList.Add(40);
+            sortedList.Add(70);
+            sortedList.Add(587);
+            sortedList.Display();
+
 
         }
     }
