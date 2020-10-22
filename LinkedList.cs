@@ -126,6 +126,32 @@ namespace LinkedListProblem
             newNode.next = node.next;
             node.next = newNode;
         }
+
+        public Node Delete(int data)
+        {
+            var node = Search(data);
+            if (node == null)
+                return null;
+            var temp = head;
+            while (temp.next != node)
+            {
+                temp = temp.next;
+            }
+            temp.next = node.next;
+            return node;
+        }
+
+        public int Size()
+        {
+            var temp = head;
+            var size = 0;
+            while(temp != null)
+            {
+                temp = temp.next;
+                size++;
+            }
+            return size;
+        }
         public void Display()
         {
             Node temp = this.head;

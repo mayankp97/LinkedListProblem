@@ -60,5 +60,32 @@ namespace LinkedListProblemTests
 
             Assert.That(resultNode, Is.Null);
         }
+        [Test]
+        public void Delete_IfElementPresent_Delets()
+        {
+            var linkedList = new LinkedList();
+            linkedList.AddAtBack(56);
+            linkedList.AddAtBack(30);
+            linkedList.AddAtBack(40);
+            linkedList.AddAtBack(70);
+
+            var resultNode = linkedList.Delete(40);
+
+            Assert.That(resultNode.data, Is.EqualTo(40));
+            Assert.That(linkedList.Size(), Is.EqualTo(3));
+        }
+        [Test]
+        public void Delete_IfElementAbsent_ReturnNull()
+        {
+            var linkedList = new LinkedList();
+            linkedList.AddAtBack(56);
+            linkedList.AddAtBack(30);
+            linkedList.AddAtBack(70);
+
+            var resultNode = linkedList.Delete(40);
+
+            Assert.That(resultNode, Is.Null);
+            Assert.That(linkedList.Size(), Is.EqualTo(3));
+        }
     }
 }
