@@ -10,8 +10,8 @@ namespace LinkedListProblem
             
             var linkedList = new LinkedList();
             linkedList.AddAtBack(56);
-            linkedList.AddAtBack(30);
             linkedList.AddAtBack(70);
+            linkedList.InsertAtParticularPosition(2, 30);
             linkedList.Display();
 
         }
